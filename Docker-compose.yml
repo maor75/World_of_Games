@@ -1,10 +1,11 @@
 version: '3'
+
 services:
   flask-app:
-    build:
-      context: .
+    build: .
     ports:
-      - 5000:5000
+      - 8777:5000
     volumes:
       - ./Scores.txt:/Scores.txt
-    command: python app.py
+    command: python MainScores.py
+    image: maoravidan/flask-app:latest
