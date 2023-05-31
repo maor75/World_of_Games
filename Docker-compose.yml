@@ -1,0 +1,10 @@
+version: '3'
+services:
+  flask-app:
+    build:
+      context: .
+    ports:
+      - 5000:5000
+    volumes:
+      - ./Scores.txt:/Scores.txt
+    command: python app.py
