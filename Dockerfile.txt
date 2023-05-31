@@ -1,9 +1,9 @@
 FROM python:3.9
-WORKDIR /app
+WORKDIR /World_of_Games
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install -r requirements.txt
 COPY . .
 COPY Scores.txt /Scores.txt
-ENV FLASK_APP=app.py
+ENV FLASK_APP=MainScores.py
 EXPOSE 5000
-CMD ["flask", "run", "--host=0.0.0.0"]
+CMD ["python",MainScores.py"]
