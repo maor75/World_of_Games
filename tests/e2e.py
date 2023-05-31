@@ -8,7 +8,6 @@ def test_scores_service(app_url):
     score_element = driver.find_element(By.ID, "score")
     score_text = score_element.text
     driver.quit()
-    # http://127.0.0.1:5000
     try:
         score = int(score_text)
         if 1 <= score <= 1000:
@@ -20,7 +19,7 @@ def test_scores_service(app_url):
 
 
 def main_function():
-    app_url = "http://127.0.0.1:5000"
+    app_url = "http://127.0.0.1:5001"
     result = test_scores_service(app_url)
     if result:
         print("Tests passed.")
@@ -28,3 +27,4 @@ def main_function():
     else:
         print("Tests failed.")
         return -1
+
