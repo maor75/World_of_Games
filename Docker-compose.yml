@@ -4,7 +4,7 @@ services:
   flask-app:
     build: .
     ports:
-      - 8777:5000
+      - 8777:5001
     volumes:
       - ./Scores.txt:/Scores.txt
     command: python MainScores.py
