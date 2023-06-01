@@ -19,7 +19,7 @@ def test_scores_service(app_url):
 
 
 def main_function():
-    app_url = "http://127.0.0.1:5001"
+    app_url = "http://127.0.0.1:5000"
     result = test_scores_service(app_url)
     if result:
         print("Tests passed.")
