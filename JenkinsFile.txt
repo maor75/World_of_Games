@@ -29,7 +29,7 @@ pipeline {
       steps {
         script {
           bat 'docker tag flask-app maoravidan/flask-app'
-          bat 'docker login -u maoravidan -p Maor8899+'
+      
           bat 'docker push maoravidan/flask-app'
         }
       }
